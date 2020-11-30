@@ -76,7 +76,11 @@ include("header.php");
 // 						{ required	
 							echo"<div class='alert alert-success' name='shake'>
 								<strong>Mail Successfully Sent</strong></a>.
-								</div>";
+								</div>
+								<script>
+								
+// 								alert('Mail Successfully Sent to admin.');
+// 								</script>";";
 // 						}else
 // 						{
 // 							echo"<div class='alert alert-warning' name='shake'>
