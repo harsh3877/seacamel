@@ -55,23 +55,24 @@ include("header.php");
 						$headers="mail from: ".$useremail;
 						$subject="Enquiry email";
 						$to="desiboy1140@gmail.com";	
-						// require_once('PHPMailer\PHPMailerAutoload.php');
-						// $mail= new PHPMailer();
-						// $mail->isSMTP();
-						// $mail->SMTPAuth = true;
-						// $mail->SMTPSecure='ssl';
-						// $mail->Host='smtp.gmail.com';
-						// $mail->Port='465';
-						// $mail->isHTML();
-						// $mail->Username='harshsharma3877@gmail.com';
-						// $mail->Password='sharma3877';
+
+						require_once('PHPMailer\PHPMailerAutoload.php');
+						$mail= new PHPMailer();
+						$mail->isSMTP();
+						$mail->SMTPAuth = true;
+						$mail->SMTPSecure='ssl';
+						$mail->Host='smtp.gmail.com';
+						$mail->Port='465';
+						$mail->isHTML();
+						$mail->Username='harshsharma3877@gmail.com';
+						$mail->Password='sharma38777';
 						
-						// $mail->Subject='Mailed from SeaCamels contact form: '.$userfirstname." ".$userlastname;
-						// $mail->Body=$useremail." > ".$message;
-						// $mail->AddAddress('desiboy1140@gmail.com');
+						$mail->Subject='Mailed from SeaCamels contact form: '.$userfirstname." ".$userlastname;
+						$mail->Body=$useremail." > ".$message;
+						$mail->AddAddress('desiboy1140@gmail.com');
 
 						
-						if (mail($to,$subject,$message,$headers))
+						if ($mail->Send())
 						{	
 							echo"<div class='alert alert-success' name='shake'>
 								<strong>Mail Successfully Sent</strong></a>.
@@ -96,7 +97,7 @@ include("header.php");
 			<div class='col-12 col-md-6 col-lg-6 mb-3 text-center'>
 				<div class='contact-image'>
 					<!--img class='bottomimage' animated bounce infinite src='images/contact1.png' width='100%'-->
-					<img class=' ' src='images/contact.png' width='100%'>
+					<img class='' src='images/contact.png' width='100%'>
 				</div>
 				</div>
 			</div>
