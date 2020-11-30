@@ -135,15 +135,15 @@ include("footer.php");
 
 <!--   <dsgdghth>    -->
 <script>
-	$(function(){
-	  var aname='animated shake ';
-	  var aend='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-	  $('button.loginbtn').on('click',function(){
-		  $('div[name=shake]').addClass(aname).one(aend,function(){
-			  $(this).removeClass(aname);
-		  });
-	  });
-  });
+// 	$(function(){
+// 	  var aname='animated shake ';
+// 	  var aend='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+// 	  $('button.loginbtn').on('click',function(){
+// 		  $('div[name=shake]').addClass(aname).one(aend,function(){
+// 			  $(this).removeClass(aname);
+// 		  });
+// 	  });
+//   });
 </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
