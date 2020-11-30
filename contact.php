@@ -75,7 +75,7 @@ include("header.php");
 // 						if ($mail->Send())
 // 						{ required	
 							echo"<div class='alert alert-success' name='shake'>
-								<strong>Mail Successfully Sent</strong></a>.
+								<strong>Mail Successfully Sent</strong></a>
 								</div>
 								<script>
 								
