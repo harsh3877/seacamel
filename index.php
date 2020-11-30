@@ -26,7 +26,7 @@ include("header.php");
 		<hr class='w-25'>
 		<div class='row'>
 			<div class='col-12 col-md-6 col-lg-6 mt-3'>
-				<form action="contact.php" method="POST">
+				<form action="#" method="POST">
 				<div class='input-group mb-3'>
 					<input type='text' class='form-control text-primary' placeholder='First Name' id='usrfnme' name="userfirstname">
 					<input type='text' class='form-control text-primary' placeholder='Last Name' id='usrlnme' name="userlastname">
