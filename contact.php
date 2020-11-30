@@ -80,7 +80,7 @@ include("header.php");
 								<script>
 								
 // 								alert('Mail Successfully Sent to admin.');
-// 								</script>";";
+// 								</script>";
 // 						}else
 // 						{
 // 							echo"<div class='alert alert-warning' name='shake'>
