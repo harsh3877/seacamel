@@ -28,17 +28,17 @@ include("header.php");
 			<div class='col-12 col-md-6 col-lg-6 mt-3'>
 				<form action="#" method="POST">
 				<div class='input-group mb-3'>
-					<input type='text' class='form-control text-primary' placeholder='First Name' id='usrfnme' name="userfirstname">
-					<input type='text' class='form-control text-primary' placeholder='Last Name' id='usrlnme' name="userlastname">
+					<input type='text' class='form-control text-primary' placeholder='First Name' id='usrfnme' name="userfirstname" required>
+					<input type='text' class='form-control text-primary' placeholder='Last Name' id='usrlnme' name="userlastname" required>
 				</div>
 				<div class='input-group mb-3'>
-					<input type='email' class='form-control text-primary' placeholder='Email' id='usremail' name="useremail">
+					<input type='email' class='form-control text-primary' placeholder='Email' id='usremail' name="useremail" required>
 				</div>
 				<div class='input-group mb-3'>
-					<input type='phone' class='form-control text-primary' maxlength="10" placeholder='Phone No.' id='usrphone' name="userphone">
+					<input type='phone' class='form-control text-primary' maxlength="10" placeholder='Phone No.' id='usrphone' name="userphone" required>
 				</div>
 				<div class='form-group'>
-				     <textarea class='form-control text-primary' style="resize:none;"placeholder='Message' rows='5' id='comment' name="message"></textarea>
+				     <textarea class='form-control text-primary' style="resize:none;"placeholder='Message' rows='5' id='comment' name="message" required></textarea>
 				</div>
 				<button type='submit' name="submit" class='btn btn-success mb-3'>Submit</button>
 				<?php
@@ -47,46 +47,46 @@ include("header.php");
 					if (isset($_POST['submit']))
 					{
 						//include_once('connectdb.php');
-						$userfirstname=$_POST['userfirstname'];
-						$userlastname=$_POST['userlastname'];
-						$useremail=$_POST['useremail'];
-						$userphone=$_POST['userphone'];
-						$message=$_POST['message'];
-						$headers="mail from: ".$useremail;
-						$subject="Enquiry email";
-						$to="desiboy1140@gmail.com";	
+// 						$userfirstname=$_POST['userfirstname'];
+// 						$userlastname=$_POST['userlastname'];
+// 						$useremail=$_POST['useremail'];
+// 						$userphone=$_POST['userphone'];
+// 						$message=$_POST['message'];
+// 						$headers="mail from: ".$useremail;
+// 						$subject="Enquiry email";
+// 						$to="desiboy1140@gmail.com";	
 
-						require_once('PHPMailer\PHPMailerAutoload.php');
-						$mail= new PHPMailer();
-						$mail->isSMTP();
-						$mail->SMTPAuth = true;
-						$mail->SMTPSecure='ssl';
-						$mail->Host='smtp.gmail.com';
-						$mail->Port='465';
-						$mail->isHTML();
-						$mail->Username='harshsharma3877@gmail.com';
-						$mail->Password='sharma38777';
+// 						require_once('PHPMailer\PHPMailerAutoload.php');
+// 						$mail= new PHPMailer();
+// 						$mail->isSMTP();
+// 						$mail->SMTPAuth = true;
+// 						$mail->SMTPSecure='ssl';
+// 						$mail->Host='smtp.gmail.com';
+// 						$mail->Port='465';
+// 						$mail->isHTML();
+// 						$mail->Username='harshsharma3877@gmail.com';
+// 						$mail->Password='sharma38777';
 						
-						$mail->Subject='Mailed from SeaCamels contact form: '.$userfirstname." ".$userlastname;
-						$mail->Body=$useremail." > ".$message;
-						$mail->AddAddress('desiboy1140@gmail.com');
+// 						$mail->Subject='Mailed from SeaCamels contact form: '.$userfirstname." ".$userlastname;
+// 						$mail->Body=$useremail." > ".$message;
+// 						$mail->AddAddress('desiboy1140@gmail.com');
 
 						
-						if ($mail->Send())
-						{	
+// 						if ($mail->Send())
+// 						{ required	
 							echo"<div class='alert alert-success' name='shake'>
 								<strong>Mail Successfully Sent</strong></a>.
 								</div>";
-						}else
-						{
-							echo"<div class='alert alert-warning' name='shake'>
-								<strong>Mail not Sent</strong></a>.
-								</div>
-								<script>
+// 						}else
+// 						{
+// 							echo"<div class='alert alert-warning' name='shake'>
+// 								<strong>Mail not Sent</strong></a>.
+// 								</div>
+// 								<script>
 								
-								alert('Mail not sent!');
-								</script>";
-						}   
+// 								alert('Mail not sent!');
+// 								</script>";
+// 						}   
 						
 											
 					}
